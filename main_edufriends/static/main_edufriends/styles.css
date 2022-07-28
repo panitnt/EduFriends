@@ -1,0 +1,38 @@
+body {
+    text-align: center;
+    font-family: 'Ubuntu';
+    font-weight: 400;
+}
+h1 {
+    font-size: 10rem;
+}
+p {
+    font-size: 2.5rem;
+}
+
+
+/* intro EduFriends */
+
+.intro-edufriends {
+    position: relative;
+}
+.intro-edufriends-bg {
+    position: absolute;
+    opacity: 0.5;
+    padding: 0%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+.intro-edufriends-text {
+    position: relative;
+    opacity: 1;
+    padding-top: 20%;
+}
+.intro-title {
+    font-family: 'Amatic SC';
+}
+.intro-description {
+    font-family: 'Edu VIC WA NT Beginner';
+}
