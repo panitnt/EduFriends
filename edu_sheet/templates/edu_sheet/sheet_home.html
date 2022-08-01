@@ -4,13 +4,13 @@
 <br><br>
 <div class="edu-sheet">
     <h3>Get sheet, get improve!</h3>
-    <div class="row">
+    <div class="row edu-sheet-stock">
         {% for sheet in all_sheet %}
             <div class="col-md-3 col-sm-12">
-                <h4><a href="">{{sheet.name}}</a></h4>
-                <p class="sheet-details">{{sheet.price}}</p>
-                <p class="sheet-details">{{sheet.description|safe|truncatechars:30}}</p>
-                <img src="{{sheet.image.url}}" alt="" width="70%">
+                <h4><a href="{% url 'details' sheet.id %}">{{sheet.name}}</a></h4>
+                <p class="sheet-details">{{sheet.price}} Baht</p>
+                <p class="sheet-details">by {{sheet.by}} : {{sheet.description|safe|truncatechars:30}}</p>
+                <img src="{{sheet.image.url}}" alt="" width="80%">
             </div>
         {% endfor %}
     </div>

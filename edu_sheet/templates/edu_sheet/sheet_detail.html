@@ -1,0 +1,17 @@
+{% extends 'main_edufriends/base.html' %}
+{% block content%}
+{% load static %}
+
+<div style="padding: 10%;">
+    <h2 style="padding: 5%;"><strong>{{detail.subject}}</strong> by {{detail.by}}</h2>
+    <h4>subject : {{detail.subject}}</h4>
+    <h4>price : {{detail.price}} Baht.</h4>
+    <p style="padding: 5%;">description : {{detail.description}}</p>
+    <img src="{{detail.image.url}}" alt="" width="50%" style="padding: 0 0 5%;">
+    <h4>owner contact : {{detail.contact}}</h4>
+    <p>sheet id - {{detail.id}}</p>
+
+
+</div>
+
+{% endblock %}
