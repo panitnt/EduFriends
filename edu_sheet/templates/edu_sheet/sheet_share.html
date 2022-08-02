@@ -1,0 +1,29 @@
+{% extends 'main_edufriends/base.html' %}
+{% load static %}
+{% block title %}share my sheet{% endblock%}
+{% block content%}
+<div class="share-sheet" style="padding:5% 0;">
+    <h4>About your sheet</h4>
+    <form action="mailto:dxrynq@gmail.com?subject=Sending request to share my sheet" method="post" enctype="text/plain">
+        <p>name of sheet: <input type="text" required="required" name="name"></p>
+        <p>select subject: <select name="subject" id="">
+            <option value="engineering-math1">Engineering Math1</option>
+            <option value="engineering-math2">Engineering Math2</option>
+            <option value="gen-phy1">General Physics1</option>
+            <option value="gen-phy2">General Physics2</option>
+            <option value="calculus1">Calculus1</option>
+            <option value="gen-ed">General Education</option>
+            <option value="other">Other</option>
+        </select> <br>
+        If you select other, please enter subject. <input type="text" name="other-subject">
+        </p>
+        <p>sheet by: <input type="text" required="required" name="by"></p>
+        <p>description here</p>
+        <textarea name="description" id="" cols="60" rows="10"></textarea>
+        <p>price: <input type="number" required="required" name="price"></p>
+        <p>contact: <input type="text" name="contact" id=""></p>
+        <p>picture: you can sent by email(when it pop up for you)</p>
+        <p><input type="submit" name="" id="" formaction="{% url 'sheet'%}"></p>
+    </form>
+</div>
+{% endblock %}

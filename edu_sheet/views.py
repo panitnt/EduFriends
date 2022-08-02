@@ -9,3 +9,6 @@ def sheet(request):
 def details(request, sheet_id):
     detail = get_object_or_404(Sheet, pk=sheet_id)
     return render(request, 'edu_sheet/sheet_detail.html', {'detail': detail})
+
+def share(request):
+    return render(request, 'edu_sheet/sheet_share.html')

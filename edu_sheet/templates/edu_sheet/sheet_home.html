@@ -1,9 +1,11 @@
 {% extends 'main_edufriends/base.html' %}
 {% load static %}
+{% block title %}sheet{% endblock%}
 {% block content%}
 <br><br>
 <div class="edu-sheet">
     <h3>Get sheet, get improve!</h3>
+    <p>If you want to share your sheet, <a href="{% url 'share'%}">click!</a></p>
     <div class="row edu-sheet-stock">
         {% for sheet in all_sheet %}
             <div class="col-md-3 col-sm-12">
