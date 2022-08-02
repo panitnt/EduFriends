@@ -1,0 +1,17 @@
+{% extends 'main_edufriends/base.html' %}
+{% load static %}
+{% block title %}tutors{% endblock%}
+{% block content%}
+<br><br>
+<div class="main-tutors">
+    <h3>Get tutor, get improve!</h3>
+    <p>If you want to be tutor, <a href="{% url 'tobetutors'%}">click!</a></p>
+    <div class="row edu-sheet-stock">
+        {% for tutor in all_tutors %}
+            <div class="col-md-6 col-sm-12">
+                
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

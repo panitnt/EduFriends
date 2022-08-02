@@ -8,7 +8,7 @@
                     <img src="{% static 'main_edufriends/icon-2.ico' %}" alt="" height="30px">
                 </li>
                 <li>
-                    <a href="#" class="navbar-brand" style="font-family: 'Cormorant SC';"> EduFriends</a>
+                    <a href="{% url 'home' %}" class="navbar-brand" style="font-family: 'Cormorant SC';"> EduFriends</a>
                 </li>
             </ul>
             <ul class="nav justify-content-end">
@@ -16,13 +16,13 @@
                     <a class="nav-link" href="{% url 'home' %}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled">StudyRoom</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled">Tutor</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="{% url 'sheet'%}">Sheet</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'tutors' %}">Tutors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled">StudyRoom</a>
                 </li>
             </ul>
         </div>

@@ -23,6 +23,7 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home , name='home'),
-    path('sheet/', include('edu_sheet.urls'))
+    path('sheet/', include('edu_sheet.urls')),
+    path('tutors/', include('tutors.urls')),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
