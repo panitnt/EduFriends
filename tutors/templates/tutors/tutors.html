@@ -8,9 +8,23 @@
     <p>If you want to be tutor, <a href="{% url 'tobetutors'%}">click!</a></p>
     <div class="row edu-sheet-stock">
         {% for tutor in all_tutors %}
-            <div class="col-md-6 col-sm-12">
-                
+
+        <div class="col-md-4 col-sm-12">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{ tutor.picture.url }}" class="img-fluid rounded-start" alt="">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ tutor.nickname }}</h5>
+                            <p class="card-text"><small>{{ tutor.fullname }}</small></p>
+                            <p class="card-text">{{ tutor.subject }}</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
         {% endfor %}
     </div>
 </div>
