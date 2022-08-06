@@ -9,6 +9,7 @@ class Room(models.Model):
     university = models.CharField(max_length=255, blank=True)
     date = models.DateField()
     time = models.TimeField()
+    hour = models.IntegerField()
     people = models.IntegerField()
     url = models.URLField()
 

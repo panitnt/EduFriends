@@ -25,5 +25,6 @@ urlpatterns = [
     path('', views.home , name='home'),
     path('sheet/', include('edu_sheet.urls')),
     path('tutors/', include('tutors.urls')),
+    path('study_room/', include('study_room.urls')),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

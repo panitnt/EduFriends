@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'main_edufriends',
     'edu_sheet',
     'tutors',
+    'study_room',
 ]
 
 MIDDLEWARE = [
