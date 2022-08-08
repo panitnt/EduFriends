@@ -1,0 +1,25 @@
+{% extends 'main_edufriends/base.html' %}
+{% load static %}
+{% block title %}room{% endblock%}
+{% block content%}
+<br><br>
+<div class="study-rooms">
+    <h3>Get friends, get improve!</h3>
+    <p>If you want to create your study room, <a href="#">click!</a></p>
+    <p>*** please tell us at least 1 day before </p>
+    <div class="row">
+        {% for room in rooms %}
+        <div class="all-rooms">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{room.subject}} by {{room.by}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{room.university}}</h6>
+                    <p class="card-text">{{room.date}} {{room.time}} : {{room.people}}</p>
+                    <a href="{{room.url}}" class="card-link">room link</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}ß
