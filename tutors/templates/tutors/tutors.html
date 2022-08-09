@@ -5,7 +5,7 @@
 <br><br>
 <div class="main-tutors">
     <h3>Get tutor, get improve!</h3>
-    <p>If you want to be tutor, <a href="{% url 'tobetutors'%}">click!</a></p>
+    <p>If you want to be tutor, <a href="{% url 'tobetutors'%}" target="_blank">click!</a></p>
     <div class="row edu-sheet-stock">
         {% for tutor in all_tutors %}
 
@@ -20,6 +20,7 @@
                             <h5 class="card-title">{{ tutor.nickname }}</h5>
                             <p class="card-text"><small>{{ tutor.fullname }}</small></p>
                             <p class="card-text">{{ tutor.subject }}</p>
+                            <p class="card-text"><a href="{% url 'tutor_detail' tutor.id%}">more details</a></p>
                         </div>
                     </div>
                 </div>

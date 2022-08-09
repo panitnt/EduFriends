@@ -10,3 +10,7 @@ def tutors(request):
 
 def tobetutors(request):
     return render(request, 'tutors/tobe_tutors.html')
+
+def tutor_detail(request, tutor_id):
+    tutor = Tutor.objects.get(id=tutor_id)
+    return render(request, 'tutors/tutor_detail.html', {'tutor': tutor,})

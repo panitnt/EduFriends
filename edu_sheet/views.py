@@ -6,7 +6,7 @@ def sheet(request):
     all_sheet = Sheet.objects.all()
     return render(request, 'edu_sheet/sheet_home.html', {'all_sheet': all_sheet})
 
-def details(request, sheet_id):
+def sheet_details(request, sheet_id):
     detail = get_object_or_404(Sheet, pk=sheet_id)
     return render(request, 'edu_sheet/sheet_detail.html', {'detail': detail})
 
